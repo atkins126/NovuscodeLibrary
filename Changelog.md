@@ -1,3 +1,34 @@
+25/06/2021
+
+* Updated all version of Packages 
+* Added NovusCodeLibrary_Env Package  to  NovusCodeLibrary_Indy Package.
+
+19/05/2021
+
+* Removed validation code from TNovusFileUtils.IsValidFolder 
+* New property in TNovusTemplate class Lastmessage 
+* Changed function TNovusTemplate.ParseTemplate: boolean; from procedure
+
+28/03/2021
+
+* Rename TNovusGuidEx to TNovusGuid and unit name.
+* New function class function TNovusFileUtils.ExtractName(aFullFileName: String): String
+* Rename class from TGuidExUtils to TNovusGuidEx
+* New function class function TNovusNumUtils.ReverseBytesOrder(aBytes: TBytes): tBytes
+* New function class function TNovusNumUtils.HexStrToBytes(aHexStr: String): tBytes
+* New function class function TNovusNumUtils.CreateWord(const aHiByte, aLoByte: byte): word
+
+09/03/2021
+
+* New option IgnoreCase in function TNovusUtilities.RegExMatchEx default on
+* New function class function TNovusNumUtils.StrToUInt64(aStr: String): UInt64
+
+26/01/2021
+
+* New function class function TNovusNumUtils.BinToUInt64(BinStr: string): UInt64
+* New function class function HexToUint8(HexStr: String): UInt8
+* New function class function HexToUInt64(HexStr: String): UInt64
+
 26/01/2021
 
 * Renamed TNovusStringUtils.IsAlphaStr to TNovusStringUtils.IsAlpha

@@ -21,6 +21,7 @@ Type
     class function IsFileReadonly(fName: string): boolean;
     class function MoveDir(aFromDirectory, aToDirectory: String): boolean;
     class function CopyDir(aFromDirectory, aToDirectory: String): boolean;
+    class function ExtractName(aFullFileName: String): String;
     /// <summary>
     /// Extracts the extension part of a full file name without "."
     /// </summary>
@@ -258,6 +259,7 @@ begin
 
   Result := DirectoryExists(aFolder);
 
+  (*
   if Result = False then
   begin
     S := aFolder;
@@ -273,6 +275,7 @@ begin
     until I = 0;
     Result := True;
   end;
+  *)
 end;
 
 {$IFDEF DELPHI2009_UP}
@@ -344,6 +347,11 @@ begin
   lsTmpFilename := ExtractFilename(aFolder);
 
   Result := ((lsTmpFilename = '') and (lsTmpFolder <> ''));
+end;
+
+class function TNovusFileUtils.ExtractName(aFullFileName: String): String;
+begin
+  Result := stringreplace(extractfilename(aFullFileName), ExtractFileExt(aFullFileName), '', [rfIgnoreCase]);
 end;
 
 end.
